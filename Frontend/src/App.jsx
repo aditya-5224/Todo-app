@@ -2,11 +2,12 @@ import axios from 'axios';
 import { useState } from 'react'
 
 function App() {
-  const {newtodo, setnewtodo} = useState("");
+  const [newtodo, setnewtodo] = useState("");
   const [todos, setTodos] = useState([]);
 
   const addtodo = async (e) => {
     e.preventDefault();
+
     if (!newtodo.trim()) return;
     try {
       const response = await axios.post("http://localhost:5000/api/todos", {text: newtodo.trim()});
