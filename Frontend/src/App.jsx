@@ -118,9 +118,9 @@ function App() {
                     
 
                   ) : (
-                    <div>
-                      <div className="flex items-center gap-x-2">
-                        <div className="flex items-center gap-x-4 overflow-hidden flex-1 min-w-0"> 
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-x-2 overflow-hidden">
+                        <div className="flex items-center gap-x-2 overflow-hidden flex-1 min-w-0"> 
                           <button 
                           className={`flex-shrink-0 p-2 rounded-lg border-2 ${todo.completed ? 'border-green-400 bg-green-100 text-green-600' : 'border-gray-300 text-gray-400 hover:border-gray-500'}`}
                           onClick={() => toggleTodo(todo._id)}>
